@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080610">
+  <meta name="description" content="احتفلوا مع Karem Jamal يوم 23 نوفمبر — لحظات جميلة ومفاجآت ورسائل من الأصدقاء.">
+  <title>Karem Jamal | Birthday 23.11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Karem Birthday home"><span class="brand-mark">K</span><span>KAREM<span class="brand-dot">.</span></span></a>
+    <nav>
+      <a href="#countdown">العدّ التنازلي</a>
+      <a href="#surprise">المفاجأة</a>
+      <a href="#wishes">التهاني</a>
+    </nav>
+    <button class="icon-button" id="soundToggle" type="button" aria-label="تشغيل أو إيقاف المؤثرات الصوتية" title="المؤثرات الصوتية">♫</button>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="live-dot"></span> SAVE THE DATE <span class="eyebrow-line"></span> 23 NOVEMBER</div>
+        <p class="small-intro">يوم مميز… وذكريات لسه جاية</p>
+        <h1 class="hero-title"><span class="title-small">IT'S MY</span><span class="title-main">BIRTH<span class="outline-word">DAY</span></span><span class="title-name" id="nameTitle">Karem Jamal<span class="cursor">_</span></span></h1>
+        <p class="hero-description">عدّوا معايا اللحظات لحد يوم 23 نوفمبر، واستعدوا لمفاجأة صغيرة ورسائل حلوة من أحلى ناس. 💜</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#countdown">ابدأ العدّ التنازلي <span>↘</span></a>
+          <button class="button button-ghost" id="shareTop" type="button"><span>↗</span> شارك الموقع</button>
+        </div>
+        <div class="hero-footnote"><span class="tiny-star">✦</span> MADE WITH LOVE & A LITTLE MAGIC</div>
+      </div>
+      <div class="hero-art reveal" aria-label="رسم فني لكعكة عيد ميلاد مضيئة">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="orbit-label orbit-label-top">LEVEL UP <span>+</span></div>
+        <div class="cake-glow"></div>
+        <div class="cake">
+          <div class="candle candle-one"><i></i></div><div class="candle candle-two"><i></i></div><div class="candle candle-three"><i></i></div>
+          <div class="cake-top"><span class="berry b1"></span><span class="berry b2"></span><span class="berry b3"></span></div>
+          <div class="cake-layer layer-top"><span class="icing-drip d1"></span><span class="icing-drip d2"></span><span class="icing-drip d3"></span></div>
+          <div class="cake-layer layer-bottom"><span class="icing-drip d4"></span><span class="icing-drip d5"></span><span class="icing-drip d6"></span></div>
+          <div class="cake-plate"></div>
+        </div>
+        <div class="floating-chip chip-left"><span>✦</span> MAKE A WISH</div>
+        <div class="floating-chip chip-right"><span>23</span> / 11</div>
+        <div class="art-caption"><span class="caption-line"></span><span>YOUR NEXT CHAPTER STARTS SOON</span></div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="countdown-section section-wrap" id="countdown">
+      <div class="section-heading reveal"><span class="section-kicker">01 / THE COUNTDOWN</span><h2>كل ثانية <span>بتقرّبنا</span></h2><p>الموعد الجاي: 23 نوفمبر — جهّزوا التهاني 🎉</p></div>
+      <div class="countdown-grid reveal" id="countdownGrid" aria-live="polite">
+        <div class="time-card"><strong id="days">00</strong><span>يوم</span><i>DAYS</i></div>
+        <div class="time-card"><strong id="hours">00</strong><span>ساعة</span><i>HOURS</i></div>
+        <div class="time-card"><strong id="minutes">00</strong><span>دقيقة</span><i>MINUTES</i></div>
+        <div class="time-card"><strong id="seconds">00</strong><span>ثانية</span><i>SECONDS</i></div>
+      </div>
+      <div class="countdown-note"><span class="pulse-ring"></span><span id="countdownMessage">العدّ شغّال… خليك قريب!</span><span class="note-spark">✧</span></div>
+    </section>
+
+    <section class="surprise-section section-wrap" id="surprise">
+      <div class="surprise-card reveal">
+        <div class="surprise-copy"><span class="section-kicker">02 / A LITTLE MAGIC</span><h2>فيه حاجة <span>مستخبّية</span> ليك 🎁</h2><p>اضغط على الصندوق وافتح المفاجأة. وماتنساش تتمنى أمنية حلوة!</p><button class="button button-primary" id="openGift" type="button">افتح المفاجأة <span>✦</span></button></div>
+        <button class="gift-scene" id="giftScene" type="button" aria-label="افتح صندوق المفاجأة">
+          <div class="gift-aura"></div><div class="gift-box"><div class="gift-lid"><span></span></div><div class="gift-body"><span class="gift-ribbon"></span></div><div class="gift-bow"><i></i><b></b><em></em></div></div><span class="gift-spark gs1">✦</span><span class="gift-spark gs2">✧</span><span class="gift-spark gs3">✦</span>
+          <span class="gift-hint">TAP TO OPEN</span>
+        </button>
+      </div>
+      <div class="wish-reveal" id="wishReveal" hidden>
+        <div class="wish-icon">✦</div><p class="wish-label">A WISH FOR YOUR NEW CHAPTER</p><h3>سنة جديدة من عمرك،<br><span>فرص أكبر وأحلام أقرب.</span></h3><p>خليك دايمًا مؤمن بنفسك… أحلى حاجات لسه جاية يا Karem 💜</p><button class="text-button" id="closeWish" type="button">اقفل المفاجأة ×</button>
+      </div>
+    </section>
+
+    <section class="wishes-section section-wrap" id="wishes">
+      <div class="section-heading reveal"><span class="section-kicker">03 / NOTES FROM YOUR PEOPLE</span><h2>سيبوا <span>تهنئة</span> 🎉</h2><p>اكتبوا رسالة قصيرة لكريم — الرسائل هنا محفوظة 
+      <div class="wishes-layout">
+        <form class="wish-form reveal" id="wishForm">
+          <label for="friendName">اسمك</label><input id="friendName" name="friendName" maxlength="40" placeholder="اكتب اسمك..." required>
+          <label for="friendMessage">رسالتك لكريم</label><textarea id="friendMessage" name="friendMessage" maxlength="240" rows="4" placeholder="كل سنة وأنت طيب يا كريم..." required></textarea>
+          <div class="form-bottom"><span id="charCount">0 / 240</span><button class="button button-primary" type="submit">أضف التهنئة <span>↗</span></button></div>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+        <div class="wish-board reveal"><div class="board-head"><div><span class="section-kicker">THE GUESTBOOK</span><h3>كلام من القلب</h3></div><span class="wish-count" id="wishCount">0 رسالة</span></div><div class="wish-list" id="wishList"><div class="empty-state"><span>✧</span><p>لسه مفيش رسائل…<br>خليك أول واحد يكتب تهنئة!</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="final-cta section-wrap reveal">
+      <div class="final-star">✦</div><p class="section-kicker">THE DATE IS SET</p><h2>نشوفكم يوم <span>23.11</span></h2><p>خلي اللحظة دي مميزة… وابعت الموقع لصحابك.</p><button class="button button-light" id="shareBottom" type="button">شارك الدعوة <span>↗</span></button><div class="final-orbit"></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">K</span><span>KAREM<span class="brand-dot">.</span></span></a><span>© <span id="year"></span> Karem Jamal — made for a special day</span><a href="#home" class="back-top">فوق ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
